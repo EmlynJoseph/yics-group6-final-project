@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content = "width=device-width, initial-scale = 1.0">
+        <title>YiCs Project | Emlyn Joseph</title>
+        <link rel="shortcut icon" href="images/Shortcut_iconJPG.JPG">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@600&family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+        <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#backgroundimage {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.navbar {
+    background-color: rgb(2, 2, 66);
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 1.55rem 0rem;
+    flex-wrap: wrap;\
+}
+.navbar ul li {
+    font-family: Bebas Neue, serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    transition: all 0.5s ease-in;
+}
+.navbar ul li a:hover {
+    color: rgb(0, 0, 88);
+    box-shadow: 0 0 0.7rem white;
+    background-color: white;
+}
+header {
+    padding: 3rem;
+    text-align: center;
+}
+
+/*The following code animation was from https://thoughtbot.com/blog/css-animation-for-beginners*/
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#title {
+    font-weight: 100;
+    margin: 2.125rem 0;
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 700;
+    animation: bounceIn 5s; /* add this for the animation above */
+}
+
+.typing {
+    color: white;
+    font-family: "Courier New", "Courier", monospace, sans-serif;
+}
+
+// #instructions {
+    //color: rgb(0, 0, 88);
+    //font-size: 1.5rem;
+    //text-align: center;
+    //font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media only screen and (min-width: 1600px) {
+    .navbar ul li {
+        font-size: 3rem;
+    }
+    #title {
+        font-size: 4.3rem;
+    }
+    #instructions {
+        font-size: 2.7rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #title {
+        font-size: 2.5rem;
+    }
+    #instructions {
+        font-size: 1.25rem;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .navbar ul {
+        justify-content: center;
+    }
+    #title {
+        font-size: 2rem;
+    }
+    #instructions {
+        font-size: 1.1rem;
+    }
+}
+
+        </style>
+    </head>
+    <body>
+        <img src="https://img.wallpapersafari.com/desktop/1920/1080/50/96/MUmxv6.png" id="backgroundimage">
+        <nav class="navbar">
+            <ul class="list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pico-ctf-challenges/crypto-challenge.html">Cryptography</a></li>
+                <li><a href="pico-ctf-challenges/webexploit-challenge.html">Web Exploitation</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1 class="typing" id="title">Greetings!</h1>
+        </header>
+
+        <h3 id="instructions"></h3>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
+        <script>
+            let typed =  new Typed(".typing", {
+                strings: ["", "Greetings!", "Welcome to our YiCs Final Project!"],
+                typeSpeed: 115,
+                backSpeed: 60
+            })
+        </script>
+    </body>
+</html>
