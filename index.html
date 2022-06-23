@@ -3,8 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport"content = "width=device-width, initial-scale = 1.0">
-        <title>YiCs Project | Emlyn Joseph</title>
-        <link rel="shortcut icon" href="images/Shortcut_iconJPG.JPG">
+        <title>YiCs Group 6 Final Project</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@600&family=Oswald:wght@300&display=swap" rel="stylesheet">
@@ -16,15 +15,12 @@
     box-sizing: border-box;
 }
 
-#backgroundimage {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
+body {
+    background: url('images/background.jpg');
+    background-size: cover;
 }
 .navbar {
-    background-color: rgb(2, 2, 66);
+    background-color: black;
     width: 100%;
     display: inline-flex;
     align-items: center;
@@ -36,7 +32,7 @@
     display: flex;
     list-style: none;
     margin: 1.55rem 0rem;
-    flex-wrap: wrap;\
+    flex-wrap: wrap;
 }
 .navbar ul li {
     font-family: Bebas Neue, serif;
@@ -50,7 +46,7 @@
     transition: all 0.5s ease-in;
 }
 .navbar ul li a:hover {
-    color: rgb(0, 0, 88);
+    color: black;
     box-shadow: 0 0 0.7rem white;
     background-color: white;
 }
@@ -77,8 +73,7 @@ header {
 #title {
     font-weight: 100;
     margin: 2.125rem 0;
-    color: white;
-    font-size: 3.5rem;
+    font-size: 3.25rem;
     font-weight: 700;
     animation: bounceIn 5s; /* add this for the animation above */
 }
@@ -86,13 +81,25 @@ header {
 .typing {
     color: white;
     font-family: "Courier New", "Courier", monospace, sans-serif;
+    background: rgba(0, 0, 51, 0.75);
+    border-radius: 1rem;
+    padding: 2rem;
 }
 
-// #instructions {
-    //color: rgb(0, 0, 88);
-    //font-size: 1.5rem;
-    //text-align: center;
-    //font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+#instructions {
+    margin: 2rem 2rem;
+    color: white;
+    background: rgba(0, 100, 0, 0.5);
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 3.5rem;
+}
+#instructions span {
+    font-size: 3rem;
+    font-family: "Courier", monospace, sans-serif;
 }
 
 @media only screen and (min-width: 1600px) {
@@ -130,13 +137,12 @@ header {
         </style>
     </head>
     <body>
-        <img src="https://img.wallpapersafari.com/desktop/1920/1080/50/96/MUmxv6.png" id="backgroundimage">
         <nav class="navbar">
             <ul class="list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="pico-ctf-challenges/crypto-challenge.html">Challenge 1</a></li>
-                <li><a href="pico-ctf-challenges/crypto-challenge2.html">Challenge 2</a></li>
-                <li><a href="pico-ctf-challenges/webexploit-challenge.html">Challenge 3</a></li>
+                <li><a href="pico-ctf-challenges/webexploit-challenge.html">Challenge 2</a></li>
+                <li><a href="pico-ctf-challenges/crypto-challenge2.html">Challenge 3</a></li>
             </ul>
         </nav>
 
@@ -144,13 +150,13 @@ header {
             <h1 class="typing" id="title">Greetings!</h1>
         </header>
 
-        <h3 id="instructions"></h3>
+        <h3 id="instructions">Click on the navigational links above to solve interesting challenges about our topic, <br><span>Cybersecurity</span></h3>
 
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
         <script>
             let typed =  new Typed(".typing", {
-                strings: ["", "Greetings!", "Welcome to our YiCs Final Project!"],
+                strings: ["", "Greetings!", "Welcome to Group 6's YiCs Final Project!"],
                 typeSpeed: 115,
                 backSpeed: 60
             })
