@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"content = "width=device-width, initial-scale = 1.0">
+        <title>Challenge 3 - Cryptography | YiCs Group 6 Final Project</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&family=Oxygen:wght@700&display=swap" rel="stylesheet">
+
+       <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../images/background.jpg');
+    background-size: cover;
+}
+.navbar {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 1.55rem 0rem;
+    flex-wrap: wrap;
+}
+.navbar ul li {
+    font-family: Bebas Neue, serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    transition: all 0.5s ease-in;
+}
+.navbar ul li a:hover {
+    color: black;
+    box-shadow: 0 0 0.7rem white;
+    background-color: white;
+}
+
+#section1,
+#section2 {
+    background: rgba(0, 0, 51, 0.65);
+    border-radius: 1rem;
+    padding: 2rem;
+    color: white;
+}
+#name {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 3.125rem;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+#title,
+#title2 {
+    color: white;
+    text-align: center;
+    margin-top: 2.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.9rem;
+}
+
+.explanation p,
+.demonstration p {
+    margin: 1.5rem 1.25rem 3rem 1.25rem;
+    font-size: 1.25rem;
+    line-height: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+.explanation #cryptii-img {
+    float: right;
+    width: 40rem;
+    padding: 0 0 1.25rem 1.25rem;
+}
+.demonstration #caesarimg {
+    float: right;
+    width: 35rem;
+    padding: 0 0 1.25rem 1.25rem;
+}
+.explanation p a,
+.demonstration p a {
+    color: cyan;
+}
+.explanation p a:hover,
+.demonstration p a:hover {
+    color: orange;
+    text-decoration: none;
+}
+#section1 #credits {
+    font-style: italic;
+    text-align: center;
+    margin-top: -1rem;
+    font-size: 1.25rem;
+}
+
+@media only screen and (min-width: 1600px) {
+    .navbar ul li {
+        font-size: 3rem;
+    }
+    #name {
+        font-size: 4.3rem;
+    }
+    #title {
+        font-size: 3.1rem;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .navbar ul {
+        justify-content: center;
+    }
+}
+
+        </style>
+    </head>
+    </body>
+        <header class="navbar">
+            <ul class="list">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="crypto-challenge.html">Challenge 1</a></li>
+                <li><a href="webexploit-challenge.html">Challenge 2</a></li>
+                <li><a href="crypto-challenge2.html">Challenge 3</a></li>
+            </ul>
+        </header>
+
+        <section id="section1">
+            <h1 id="name">Challenge 3 - Cryptography</h1>
+
+            <hr />
+
+            <h2 id="title">Explanation</h2>
+            <div class="explanation">
+                <p>
+                    <strong><a href="https://play.picoctf.org/practice/challenge/64?page=1&search=caesar" target="_blank">picoCTF challenge</a></strong>
+                    <br>
+                    <strong>Description:</strong> Decrypt this message (picoCTF{gvswwmrkxlivyfmgsrhnrisegl})
+                    <br>
+                    <strong>Solve:</strong>
+                    <strong>Step 1.</strong> The solution to this problem is pretty straightforward. Given that the question is named ‘caesar’ and knowledge of there being a cipher named the same, we can deduce that we should run the code through a Caesar cipher.
+                    <br>
+                    <strong>Step 2.</strong> The Caesar cipher (also known as a shift cipher) is a type of substitution cipher and works by shifting the letters of the alphabet along by a given number of characters, this parameter being the key. We can either attempt to substitute through ‘brute-forcing’, where we test every shifted key in the alphabet, or simply rely on modern technology and copy and paste picoCTF{gvswwmrkxlivyfmgsrhnrisegl} into a website containing the Caesar cipher.
+                    <br>
+                    <strong>Step 3.</strong> In the demonstration below we used <a href="https://cryptii.com/" target="_blank">Cryptii</a> , but other websites such as <a href="https://www.dcode.fr/en" target="_blank">dCode</a> and <a href="http://practicalcryptography.com/" target="_blank">Practical Cryptography</a> contain the cipher tool amongst many other valuable cryptography resources too.
+                    <br>
+                    <strong>The final deciphered text (picoCTF flag) we obtain is picoCTF{crossingtherubiconjneoach}, which is the correct answer.</strong>
+                    <br>
+                    <img src="../images/cryptii.JPG" id="cryptii-img">
+
+                    <strong>Fun trivia:</strong> The phrase "crossing the Rubicon" is an idiom that means that one is passing a point of no return. Its meaning comes from allusion to the crossing of the Rubicon by Julius Caesar in early January 49 BC.
+                </p>
+            </div>
+
+            <hr />
+
+            <h2 id="title2">Demonstration</h2>
+            <div class="demonstration">
+                <p>
+                    It is worth mentioning that a Caesar cipher can be coded out in a few simple steps. Today, we will demonstrate this through Python. This snippet of code allows for the user to check all possible outputs of the Caesar cipher, and small explanations are offered below in grey.
+                    <br>
+                    <img src="../images/caesar-code.JPG" id="caesarimg">
+There are only 25 possible keys, 26 create the same output as the input and will be identical to a shift of 0. Any shift above 26 will create an identical output as one of the shifts between 1-25.
+                    <br>
+The Caesar cipher only encrypts letters so the letter spacing pattern will be identical to the plaintext. You can therefore select an encrypted block of text and know it has a meaning. With brute force you could discover the exact shift (ie one shift will make a recognisable word).
+                    <br>
+The key is constant throughout the text, the entire cipher text can be cracked with the same key once one word is deciphered.
+                    <br>
+With sufficient cipher text the frequency of every letter used can be counted and analysed. The most frequently occurring character is likely to be the 'e', you can then calculate the shift.
+                    <br>
+                    <strong>Extension knowledge about the Caesar cipher:</strong>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=kS9CnbhytV0&list=PLCiOXwirraUA69WUAMYyFicC5qbQ4PGc4" target="_blank">AQA A’Level Encryption - Caesar cipher</a>
+                    <br>
+                    <a href="https://www.youtube.com/watch?v=yWgKSx0eFzY&list=PL04uZ7242_M6O_6ITD6ncf7EonVHyBeCm&index=11" target="_blank">Encryption and the Caesar Cipher</a>
+
+                </p>
+            </div>
+
+            <p id="credits">Explanation and demonstration by Serene Zhai</p>
+
+            <hr id="lasthr"/>
+        </section>
+
+    </body>
+</html>
