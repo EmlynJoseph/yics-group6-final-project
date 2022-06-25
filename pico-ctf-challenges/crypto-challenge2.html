@@ -85,7 +85,6 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
 }
-
 .explanation #cryptii-img {
     float: right;
     width: 40rem;
@@ -119,13 +118,54 @@ body {
     #name {
         font-size: 4.3rem;
     }
-    #title {
+    #title,
+    #title2 {
         font-size: 3.1rem;
+    }
+    .explanation p,
+    .demonstration p {
+        margin: 1.5rem 1.25rem 4rem 2.25rem;
+        font-size: 2.25rem;
+        line-height: 5rem;
+    }
+    .explanation #cryptii-img {
+        width: 85rem;
+        padding: 0 0 2.25rem 2.25rem;
+    }
+    #firsthr {
+        margin-top: 10rem;
+    }
+    .demonstration #caesarimg {
+        width: 75rem;
+        padding: 0 0 2.25rem 2.25rem;
+    }
+    #section1 #credits {
+        font-size: 2.25rem;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .explanation #cryptii-img,
+    .demonstration #caesarimg {
+        max-width: 100%;
+        padding: 1.25rem 0 1.25rem 1.25rem;
     }
 }
 @media only screen and (max-width: 480px) {
     .navbar ul {
         justify-content: center;
+    }
+    .explanation p {
+        margin: 0.75rem 0.5rem 2.25rem 0.5rem;
+        font-size: 1rem;
+        line-height: 2.75rem;
+    }
+    .explanation #cryptii-img,
+    .demonstration #caesarimg {
+        width: 100%;
+        padding: 0;
+    }
+    #section1 #credits {
+        font-size: 1rem;
     }
 }
 
@@ -168,7 +208,7 @@ body {
                 </p>
             </div>
 
-            <hr />
+            <hr id="firsthr"/>
 
             <h2 id="title2">Demonstration</h2>
             <div class="demonstration">
